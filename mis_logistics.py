@@ -1,3 +1,14 @@
+"""
+Logistics & Inventory MIS – Simple Scenario Simulation
+
+This script demonstrates how MIS works in a logistics context:
+- INPUT: inventory levels, customer orders, delivery updates, and return details.
+- PROCESSING: stock allocation (full/partial/backorder), shipment creation, delivery tracking,
+              and reverse-logistics return handling.
+- OUTPUT: a daily MIS summary (orders, backorders, on-time/late deliveries, returns),
+          updated inventory, and shipment-level status.
+"""
+
 from datetime import date
 
 # -----------------------------
@@ -134,3 +145,4 @@ for s in shipments:
         f"Shipped: {s['shipped_qty']} | Status: {s['allocation_status']} | "
         f"Delivery: {s['delivery_status']} | Returned: {s.get('qty_returned', 0)}"
     )
+
